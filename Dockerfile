@@ -36,6 +36,9 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | d
 	apt-get install -y gh && \
 	rm -rf /var/lib/apt/lists/*
 
+# Google Workspace CLI (gws) - https://github.com/googleworkspace/cli
+RUN npm install -g @googleworkspace/cli
+
 # uv (Python package runner) - for nano-banana-pro and other Python skills
 RUN curl -LsSf https://astral.sh/uv/install.sh | env INSTALLER_NO_MODIFY_PATH=1 sh && \
 	mv /root/.local/bin/uv /usr/local/bin/ && \
