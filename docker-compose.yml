@@ -1,6 +1,8 @@
 services:
   openclaw-gateway:
     image: ${OPENCLAW_IMAGE}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     build: .
     restart: unless-stopped
     env_file:
